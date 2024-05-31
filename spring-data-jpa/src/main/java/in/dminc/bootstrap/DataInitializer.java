@@ -24,13 +24,13 @@ public class DataInitializer implements CommandLineRunner {
         bookRepository.deleteAll();
 
         // add bookDDD
-        Book bookDDD = new Book("Domain Driven Design", "0321125215", "Addison-Wesley");
+        Book bookDDD = new Book("Domain Driven Design", "0321125215", "Addison-Wesley", null);
         log.debug("Domain Driven Design - Id: {}", bookDDD.getId());
         Book savedDDD = bookRepository.save(bookDDD);
         log.debug("Domain Driven Design - Id: {}", savedDDD.getId());
 
         // add bookSIA
-        Book bookSIA = new Book("Spring In Action", "9781617294945", "Manning Publications");
+        Book bookSIA = new Book("Spring In Action", "9781617294945", "Manning Publications", null);
         log.debug("Spring In Action - Id: {}", bookSIA.getId());
         Book savedSIA = bookRepository.save(bookSIA);
         log.debug("Spring In Action - Id: {}", savedSIA.getId());
